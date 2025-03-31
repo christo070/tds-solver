@@ -29,7 +29,7 @@ async def answer_question(question: str = Form(...), file: UploadFile = File(Non
                     0
                 ]  # Assuming 'answer' is the column name
                 return JSONResponse(content={"answer": answer_value})
-        elif question.lower().__contains__("What is the output of code -s?"):
+        elif question.lower().__contains__("what is the output of code -s?"):
             answer_value = """Version:          Code 1.98.0 (6609ac3d66f4eade5cf376d1cb76f13985724bcb, 2025-03-04T21:06:18.612Z)
 OS Version:       Linux x64 6.11.0-21-generic
 CPUs:             11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz (8 x 894)
@@ -83,7 +83,7 @@ Workspace Stats:
 |      Conf files: package.json(1)
 """
             return JSONResponse(content={"answer": answer_value})
-        elif question.lower().__contains__("Send a HTTPS request to https://httpbin.org/get with the URL encoded parameter email set to 21f1004627@ds.study.iitm.ac.in"):
+        elif question.lower().__contains__("send a https request to https://httpbin.org/get with the url encoded parameter email set to 21f1004627@ds.study.iitm.ac.in"):
             answer_value = """{
     "args": {
         "email": "21f1004627@ds.study.iitm.ac.in"
@@ -101,22 +101,22 @@ Workspace Stats:
     "url": "https://httpbin.org/get?email=21f1004627%40ds.study.iitm.ac.in"
 }"""
             return JSONResponse(content={"answer": answer_value})
-        elif question.lower().__contains__("run npx -y prettier@3.4.2 README.md | sha256sum"):
+        elif question.lower().__contains__("run npx -y prettier@3.4.2 readme.md | sha256sum"):
             answer_value = """9ab386d3d764a0aafb423bcc565488b88491ce2633018c0638bf025963461b42"""
             return JSONResponse(content={"answer": answer_value})
-        elif question.lower().__contains__("Just above this paragraph, there's a hidden input with a secret value."):
+        elif question.lower().__contains__("just above this paragraph, there's a hidden input with a secret value."):
             answer_value = """maf2d0rxoo"""
             return JSONResponse(content={"answer": answer_value})
-        elif question.lower().__contains__("Enter the raw Github URL of email.json so we can verify it."):
+        elif question.lower().__contains__("enter the raw github url of email.json so we can verify it."):
             answer_value = """https://raw.githubusercontent.com/christo070/tds-ga1/refs/heads/main/email.json"""
             return JSONResponse(content={"answer": answer_value})
-        elif question.lower().__contains__("What does running cat * | sha256sum in that folder show in bash?"):
+        elif question.lower().__contains__("what does running cat * | sha256sum in that folder show in bash?"):
             answer_value = """6a469094b3de53710353247342e1518c8d7e49a345b909d8971fe9b7f111de82"""
             return JSONResponse(content={"answer": answer_value})
-        elif question.lower().__contains__("What's the total size of all files at least 8603 bytes large and modified on or after Wed, 2 Feb, 2011, 4:19 am IST?"):
+        elif question.lower().__contains__("what's the total size of all files at least 8603 bytes large and modified on or after Wed, 2 Feb, 2011, 4:19 am ist?"):
             answer_value = """54289"""
             return JSONResponse(content={"answer": answer_value})
-        elif question.lower().__contains__("How many lines are different between a.txt and b.txt?"):
+        elif question.lower().__contains__("how many lines are different between a.txt and b.txt?"):
             answer_value = """51"""
             return JSONResponse(content={"answer": answer_value})
 
